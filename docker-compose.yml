@@ -2,12 +2,15 @@ version: "3.8"
 
 services:
   api:
-    image: evoapicloud/evo-ai:latest
+  # image: evoapicloud/evo-ai:latest Use this image to pull from the repo
+    image: evoai-api:latest # Use this image for local builds
     depends_on:
       - postgres
       - redis
     ports:
       - "8000:8000"
+    env_file:
+      - .env
     environment:
       POSTGRES_CONNECTION_STRING: postgresql://postgres:${POSTGRES_PASSWORD:-postgres}@postgres:5432/evo_ai
       REDIS_HOST: redis
