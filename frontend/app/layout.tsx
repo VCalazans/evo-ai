@@ -35,15 +35,15 @@ import { Toaster } from "@/components/ui/toaster";
 import ClientLayout from "./client-layout";
 import ImpersonationBar from "@/components/ImpersonationBar";
 import { PublicEnvScript } from "next-runtime-env";
+import DynamicFavicon from "@/components/dynamic-favicon";
 
 const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Evo AI",
   description: "AI Multi-Agent Platform",
-  icons: {
-    icon: "/favicon.svg",
-  },
+  // Favicon will be set dynamically by DynamicFavicon component
   generator: "v0.dev",
 };
 
@@ -58,6 +58,7 @@ export default function RootLayout({
         <PublicEnvScript />
       </head>
       <body className={inter.className}>
+        <DynamicFavicon />
         <ImpersonationBar />
         <ThemeProvider
           attribute="class"
