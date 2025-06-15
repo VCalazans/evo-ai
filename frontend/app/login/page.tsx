@@ -49,6 +49,7 @@ import { useToast } from "@/hooks/use-toast";
 import Link from "next/link";
 import { login, forgotPassword, getMe, register, resendVerification } from "@/services/authService";
 import { CheckCircle2, AlertCircle } from "lucide-react";
+import { getPlatformLogoUrl } from "@/lib/logo";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -62,6 +63,9 @@ export default function LoginPage() {
   const [loginError, setLoginError] = useState("");
   const [isEmailNotVerified, setIsEmailNotVerified] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
+
+  // Get logo URL from environment variable with fallback
+  const logoUrl = getPlatformLogoUrl();
 
   const [loginData, setLoginData] = useState({
     email: "",
@@ -274,7 +278,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-[#121212] p-4">
       <div className="mb-8">
         <Image
-          src="https://evolution-api.com/files/evo/logo-evo-ai.svg"
+          src={logoUrl}
           alt="Evolution API"
           width={140}
           height={30}
@@ -303,19 +307,20 @@ export default function LoginPage() {
           </div>
         ) : (
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList className="grid w-full grid-cols-3 bg-[#222]">
+          <TabsList className="grid w-full grid-cols-2 bg-[#222]">
             <TabsTrigger
               value="login"
               className="data-[state=active]:bg-[#333] data-[state=active]:text-emerald-400"
             >
               Login
             </TabsTrigger>
-            <TabsTrigger
+            {/* Register tab hidden - keeping code for future use */}
+            {/* <TabsTrigger
               value="register"
               className="data-[state=active]:bg-[#333] data-[state=active]:text-emerald-400"
             >
               Register
-            </TabsTrigger>
+            </TabsTrigger> */}
             <TabsTrigger
               value="forgot"
               className="data-[state=active]:bg-[#333] data-[state=active]:text-emerald-400"
@@ -403,7 +408,8 @@ export default function LoginPage() {
             </form>
           </TabsContent>
 
-          <TabsContent value="register">
+          {/* Register content hidden - keeping code for future use */}
+          {/* <TabsContent value="register">
             <form onSubmit={handleRegister}>
               <CardHeader>
                 <CardTitle className="text-white">Register</CardTitle>
@@ -497,7 +503,7 @@ export default function LoginPage() {
                 </Button>
               </CardFooter>
             </form>
-          </TabsContent>
+          </TabsContent> */}
 
           <TabsContent value="forgot">
             <form onSubmit={handleForgotPassword}>

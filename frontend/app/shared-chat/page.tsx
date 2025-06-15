@@ -51,6 +51,7 @@ import Image from "next/image";
 import { SharedSessionList } from "./components/SharedSessionList";
 import { SharedChatPanel } from "./components/SharedChatPanel";
 import { FileData } from "@/lib/file-utils";
+import { getPlatformLogoUrl } from "@/lib/logo";
 
 interface AttachedFile {
   filename: string;
@@ -548,7 +549,7 @@ Args: ${
           <div className="p-4 border-b border-neutral-700 bg-neutral-900 flex items-center justify-between">
             <div className="flex items-center gap-4">
               <Image
-                src="https://evolution-api.com/files/evo/logo-evo-ai.svg"
+                src={getPlatformLogoUrl()}
                 alt="Evolution API"
                 width={60}
                 height={30}

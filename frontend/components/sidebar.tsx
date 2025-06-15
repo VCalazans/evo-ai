@@ -60,6 +60,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { getPlatformLogoUrl, getPlatformFaviconUrl } from "@/lib/logo";
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -182,7 +183,7 @@ export default function Sidebar() {
             {isCollapsed ? (
               <div className="h-10 w-10 flex items-center justify-center bg-neutral-800/50 rounded-full p-1">
                 <Image
-                  src="https://evolution-api.com/files/evo/favicon.svg"
+                  src={getPlatformFaviconUrl()}
                   alt="Evolution API"
                   width={40}
                   height={40}
@@ -190,7 +191,7 @@ export default function Sidebar() {
               </div>
             ) : (
               <Image
-                src="https://evolution-api.com/files/evo/logo-evo-ai.svg"
+                src={getPlatformLogoUrl()}
                 alt="Evolution API"
                 width={90}
                 height={40}
@@ -315,7 +316,7 @@ export default function Sidebar() {
             <>
               <div className="text-sm text-emerald-400 font-medium">Evo AI</div>
               <div className="text-xs text-neutral-500 mt-1">
-                © {new Date().getFullYear()} Evolution API
+                {/* © {new Date().getFullYear()} Evolution API */}
               </div>
             </>
           )}
