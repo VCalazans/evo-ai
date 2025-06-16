@@ -8,7 +8,7 @@ export const getPlatformLogoUrl = (): string => {
   const logoUrl = 
     process.env.NEXT_PUBLIC_PLATFORM_LOGO_URL ||
     (typeof window !== 'undefined' && (window as any).__NEXT_DATA__?.env?.NEXT_PUBLIC_PLATFORM_LOGO_URL) ||
-    "https://evolution-api.com/files/evo/logo-evo-ai.svg";
+    "https://s3.jovemprofissionalchat.com.br/typebot/Oracle.png";
   
   console.log('[Logo] Using logo URL:', logoUrl);
   return logoUrl;
@@ -24,7 +24,7 @@ export const getPlatformFaviconUrl = (): string => {
   const faviconUrl = 
     process.env.NEXT_PUBLIC_PLATFORM_FAVICON_URL ||
     (typeof window !== 'undefined' && (window as any).__NEXT_DATA__?.env?.NEXT_PUBLIC_PLATFORM_FAVICON_URL) ||
-    "https://evolution-api.com/files/evo/favicon.svg";
+    "https://s3.jovemprofissionalchat.com.br/typebot/Oicon.svg";
   
   console.log('[Logo] Using favicon URL:', faviconUrl);
   return faviconUrl;
