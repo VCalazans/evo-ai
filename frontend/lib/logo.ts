@@ -1,15 +1,31 @@
 /**
  * Utility to get the platform logo URL from environment variables
  * with fallback to the default Evolution API logo
+ * Ensures proper access in both development and production environments
  */
 export const getPlatformLogoUrl = (): string => {
-  return process.env.NEXT_PUBLIC_PLATFORM_LOGO_URL || "https://evolution-api.com/files/evo/logo-evo-ai.svg";
+  // Check multiple sources to ensure it works in all environments
+  const logoUrl = 
+    process.env.NEXT_PUBLIC_PLATFORM_LOGO_URL ||
+    (typeof window !== 'undefined' && (window as any).__NEXT_DATA__?.env?.NEXT_PUBLIC_PLATFORM_LOGO_URL) ||
+    "https://evolution-api.com/files/evo/logo-evo-ai.svg";
+  
+  console.log('[Logo] Using logo URL:', logoUrl);
+  return logoUrl;
 };
 
 /**
  * Utility to get the platform favicon URL from environment variables
  * with fallback to the default Evolution API favicon
+ * Ensures proper access in both development and production environments
  */
 export const getPlatformFaviconUrl = (): string => {
-  return process.env.NEXT_PUBLIC_PLATFORM_FAVICON_URL || "https://evolution-api.com/files/evo/favicon.svg";
+  // Check multiple sources to ensure it works in all environments
+  const faviconUrl = 
+    process.env.NEXT_PUBLIC_PLATFORM_FAVICON_URL ||
+    (typeof window !== 'undefined' && (window as any).__NEXT_DATA__?.env?.NEXT_PUBLIC_PLATFORM_FAVICON_URL) ||
+    "https://evolution-api.com/files/evo/favicon.svg";
+  
+  console.log('[Logo] Using favicon URL:', faviconUrl);
+  return faviconUrl;
 }; 
