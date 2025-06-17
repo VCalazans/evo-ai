@@ -1,25 +1,25 @@
 {
-  "name": "evo-ai-frontend",
+  "name": "oracle-frontend",
   "version": "0.1.0",
   "license": "Apache-2.0",
   "private": false,
-  "description": "Evo AI is an open-source platform for creating and managing AI agents, enabling integration with different AI models and services.",
+  "description": "AI Multi-Agent Platform for creating and managing AI agents, enabling integration with different AI models and services.",
   "author": "Evolution API <contato@evolutionapi.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/EvolutionAPI/evo-ai-frontend.git"
+    "url": "https://github.com/EvolutionAPI/oracle-frontend.git"
   },
-  "homepage": "https://github.com/EvolutionAPI/evo-ai-frontend",
+  "homepage": "https://github.com/EvolutionAPI/oracle-frontend",
   "bugs": {
-    "url": "https://github.com/EvolutionAPI/evo-ai-frontend/issues"
+    "url": "https://github.com/EvolutionAPI/oracle-frontend/issues"
   },
   "keywords": [
-    "ai",
     "nextjs",
     "react",
-    "frontend",
-    "open-source",
-    "evo-ai"
+    "typescript",
+    "ai",
+    "agents",
+    "oracle"
   ],
   "engines": {
     "node": ">=18"

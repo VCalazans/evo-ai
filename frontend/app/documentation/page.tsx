@@ -1588,7 +1588,7 @@ function DocumentationContent() {
             </div>
           </div>
           <div className="border-t border-emerald-500/20 mt-6 pt-4 text-center text-xs text-neutral-400">
-            Built with ❤️ for the Agent2Agent community • Evolution API © 2025
+            Built with ❤️ for the Agent2Agent community • Oracle © 2025
           </div>
         </CardContent>
       </Card>

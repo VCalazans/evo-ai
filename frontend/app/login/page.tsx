@@ -274,8 +274,8 @@ export default function LoginPage() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-[#121212] p-4">
       <div className="mb-8">
         <Image
-          src="https://evolution-api.com/files/evo/logo-evo-ai.svg"
-          alt="Evolution API"
+          src="https://s3.jovemprofissionalchat.com.br/typebot/Oracle.png"
+          alt="Oracle"
           width={140}
           height={30}
           priority
@@ -303,19 +303,19 @@ export default function LoginPage() {
           </div>
         ) : (
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-          <TabsList className="grid w-full grid-cols-3 bg-[#222]">
+          <TabsList className="grid w-full grid-cols-2 bg-[#222]">
             <TabsTrigger
               value="login"
               className="data-[state=active]:bg-[#333] data-[state=active]:text-emerald-400"
             >
               Login
             </TabsTrigger>
-            <TabsTrigger
+            {/* <TabsTrigger
               value="register"
               className="data-[state=active]:bg-[#333] data-[state=active]:text-emerald-400"
             >
               Register
-            </TabsTrigger>
+            </TabsTrigger> */}
             <TabsTrigger
               value="forgot"
               className="data-[state=active]:bg-[#333] data-[state=active]:text-emerald-400"

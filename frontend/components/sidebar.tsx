@@ -182,16 +182,16 @@ export default function Sidebar() {
             {isCollapsed ? (
               <div className="h-10 w-10 flex items-center justify-center bg-neutral-800/50 rounded-full p-1">
                 <Image
-                  src="https://evolution-api.com/files/evo/favicon.svg"
-                  alt="Evolution API"
+                  src="https://s3.jovemprofissionalchat.com.br/typebot/Oicon.svg"
+                  alt="Oracle"
                   width={40}
                   height={40}
                 />
               </div>
             ) : (
               <Image
-                src="https://evolution-api.com/files/evo/logo-evo-ai.svg"
-                alt="Evolution API"
+                src="https://s3.jovemprofissionalchat.com.br/typebot/Oracle.png"
+                alt="Oracle"
                 width={90}
                 height={40}
                 className="mt-2"
@@ -313,9 +313,9 @@ export default function Sidebar() {
 
           {!isCollapsed && (
             <>
-              <div className="text-sm text-emerald-400 font-medium">Evo AI</div>
+              <div className="text-sm text-emerald-400 font-medium">Oracle</div>
               <div className="text-xs text-neutral-500 mt-1">
-                © {new Date().getFullYear()} Evolution API
+                © {new Date().getFullYear()} Oracle AI
               </div>
             </>
           )}
